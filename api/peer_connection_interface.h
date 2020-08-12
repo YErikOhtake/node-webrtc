@@ -352,7 +352,7 @@ class RTC_EXPORT PeerConnectionInterface : public rtc::RefCountInterface {
 
     static const int kUndefined = -1;
     // Default maximum number of packets in the audio jitter buffer.
-    static const int kAudioJitterBufferMaxPackets = 200;
+    static const int kAudioJitterBufferMaxPackets = 0;
     // ICE connection receiving timeout for aggressive configuration.
     static const int kAggressiveIceConnectionReceivingTimeout = 1000;
 
@@ -442,7 +442,7 @@ class RTC_EXPORT PeerConnectionInterface : public rtc::RefCountInterface {
 
     // Whether to use the NetEq "fast mode" which will accelerate audio quicker
     // if it falls behind.
-    bool audio_jitter_buffer_fast_accelerate = false;
+    bool audio_jitter_buffer_fast_accelerate = true;
 
     // The minimum delay in milliseconds for the audio jitter buffer.
     int audio_jitter_buffer_min_delay_ms = 0;
