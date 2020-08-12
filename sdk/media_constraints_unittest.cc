@@ -62,7 +62,7 @@ TEST(MediaConstraints, CopyConstraintsIntoRtcConfiguration) {
   // values that are already present.
   configuration = old_configuration;
   configuration.enable_dtls_srtp = true;
-  configuration.audio_jitter_buffer_max_packets = 34;
+  configuration.audio_jitter_buffer_max_packets = 0;
   CopyConstraintsIntoRtcConfiguration(&constraints_empty, &configuration);
   EXPECT_EQ(34, configuration.audio_jitter_buffer_max_packets);
   ASSERT_TRUE(configuration.enable_dtls_srtp);

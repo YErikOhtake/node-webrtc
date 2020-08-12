@@ -123,8 +123,8 @@ class WebRtcVoiceEngine final : public VoiceEngineInterface {
   // defaults for options which are not provided.
   absl::optional<bool> experimental_ns_;
   // Jitter buffer settings for new streams.
-  size_t audio_jitter_buffer_max_packets_ = 200;
-  bool audio_jitter_buffer_fast_accelerate_ = false;
+  size_t audio_jitter_buffer_max_packets_ = 0;
+  bool audio_jitter_buffer_fast_accelerate_ = true;
   int audio_jitter_buffer_min_delay_ms_ = 0;
   bool audio_jitter_buffer_enable_rtx_handling_ = false;
 
